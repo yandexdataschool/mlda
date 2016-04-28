@@ -7,6 +7,7 @@ SHELL = /bin/bash
 NOTEBOOKS ?= $(shell pwd)
 
 include .version  # read MLDA_IMAGE
+MLDA_IMAGE_LATEST = $(shell echo ${MLDA_IMAGE} | sed 's/:[0-9.]\+$$/:latest/')
 
 help:
 	@echo Usage: make [-e VARIABLE=VALUE] targets
@@ -24,3 +25,7 @@ run: ## run container
 
 push: ## push built image to docker hub
 	docker push ${MLDA_IMAGE}
+
+latest:
+	docker tag ${MLDA_IMAGE} ${MLDA_IMAGE_LATEST}
+	docker push ${MLDA_IMAGE_LATEST}
