@@ -1,2 +1,3 @@
-# mlda
-Machine Learning, Data Analysis course materials
+# Machine Learning, Data Analysis course materials
+
+Instructions, configurations, scripts
