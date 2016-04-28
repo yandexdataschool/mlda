@@ -26,6 +26,6 @@ run: ## run container
 push: ## push built image to docker hub
 	docker push ${MLDA_IMAGE}
 
-latest:
+latest: push
 	docker tag ${MLDA_IMAGE} ${MLDA_IMAGE_LATEST}
 	docker push ${MLDA_IMAGE_LATEST}
