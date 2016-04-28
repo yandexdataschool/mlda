@@ -1,0 +1,4 @@
+# version of images that are created from current commit. 
+# 
+
+MLDA_IMAGE=yandex/mlda:0.1.1
